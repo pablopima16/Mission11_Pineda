@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace TheWaterProject.Migrations
+namespace BookStoreProject.Migrations
 {
     /// <inheritdoc />
     public partial class Third : Migration

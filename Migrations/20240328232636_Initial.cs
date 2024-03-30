@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace TheWaterProject.Migrations
+namespace BookStoreProject.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration
