@@ -1,4 +1,4 @@
-﻿namespace TheWaterProject.Models.ViewModels
+﻿namespace BookStoreProject.Models.ViewModels
 {
     public class PaginationInfo
     {

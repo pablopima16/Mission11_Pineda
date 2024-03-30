@@ -1,26 +1,25 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using TheWaterProject.Models;
-using TheWaterProject.Models.ViewModels;
+using BookStoreProject.Models;
+using BookStoreProject.Models.ViewModels;
 
-namespace TheWaterProject.Controllers
+namespace BookStoreProject.Controllers
 {
     public class HomeController : Controller
     {
-        private IWaterRepository _repo;
+        private IBookRepository _repo;
 
-        public HomeController(IWaterRepository repo)
+        public HomeController(IBookRepository repo)
         {
             _repo = repo;
         }
 
         public IActionResult Index(int pageNum) //DONT name this page 
         {
-            int pageSize = 2;
+            int pageSize = 10;
             var blah = new ProjectsListViewModel
             {
-                Projects = _repo.Projects
-                .OrderBy(x => x.ProjectName)
+                Books = _repo.Books
+                .OrderBy(x => x.Title)
                 .Skip((pageNum - 1) * pageSize)
                 .Take(pageSize),
 
@@ -28,7 +27,7 @@ namespace TheWaterProject.Controllers
                 {
                     CurrentPage = pageNum,
                     ItemsPerPage = pageSize,
-                    TotalItems = _repo.Projects.Count()
+                    TotalItems = _repo.Books.Count()
                 }
             };
 

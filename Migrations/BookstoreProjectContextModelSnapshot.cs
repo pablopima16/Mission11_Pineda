@@ -3,21 +3,21 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TheWaterProject.Models;
+using BookStoreProject.Models;
 
 #nullable disable
 
-namespace TheWaterProject.Migrations
+namespace BookStoreProject.Migrations
 {
-    [DbContext(typeof(WaterProjectContext))]
-    partial class WaterProjectContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(BookstoreContext))]
+    partial class BookstoreProjectContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.3");
 
-            modelBuilder.Entity("TheWaterProject.Models.Project", b =>
+            modelBuilder.Entity("TheBookstoreProject.Models.Project", b =>
                 {
                     b.Property<int>("ProjectId")
                         .ValueGeneratedOnAdd()
